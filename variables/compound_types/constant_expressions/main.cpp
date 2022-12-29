@@ -10,8 +10,8 @@ int j = 0;
 
 
 int main(){
-    constexpr int mf = 20; // 20 is a constant expression
-    constexpr int limit = mf + 1; // mf + 1 is a constant expression 
+    constexpr int m = 20; // 20 is a constant expression
+    constexpr int limit = m + 1; // m + 1 is a constant expression 
     constexpr int sz = size(); // ok only if size is a constexpr function
 
     std::cout << "sz: " << sz <<std::endl;
