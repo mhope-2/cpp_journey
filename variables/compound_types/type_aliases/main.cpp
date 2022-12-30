@@ -33,7 +33,7 @@ int main(){
 
     // decltype of a parenthesized variable is always a reference 
     // decltype((i)) d; // error: d is int& and must be initialized 
-    decltype(i)e; // ok: e is an (uninitialized) int
+    decltype(i) e; // ok: e is an (uninitialized) int
         
      
 
