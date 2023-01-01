@@ -1,7 +1,9 @@
 #include <iostream>
 #include <vector>
-
-using namespace std;
+using std::vector;
+using std::cin;
+using std::cout;
+using std::endl;
 
 int main(){
     // print out vecor elements
