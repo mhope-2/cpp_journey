@@ -6,10 +6,11 @@ using std::cout;
 using std::endl;
 
 int main(){
-    // print out vecor elements
+    // vector initializations
+    vector<int> ivec (10, 4);
     vector<int> v {1, 2, 3, 4};
 
-    for (auto i : v){
+    for (auto i : ivec){
         cout << i << endl;
     }
 }
