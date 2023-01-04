@@ -1,6 +1,28 @@
 #include <iostream>
 #include <vector>
+
 using std::vector, std::string, std::cin, std::cout, std::endl;
+
+// naive BSearch using Iterators
+bool naive_binary_search(vector<int> ivec){
+    int sought = 8;
+    auto beg = ivec.begin(), end = ivec.end();
+    auto mid = beg + (end - beg) / 2; // original midpoint
+
+    while (mid != end && *mid != sought){
+        if (sought < *mid)
+            end = mid;
+        else
+            beg = mid + 1;
+        mid = beg + (end - beg) / 2;
+    }
+
+    if (*mid == sought){
+        return true;
+    }
+    return false;
+
+}
 
 
 int main(){
@@ -49,7 +71,22 @@ int main(){
     auto mid = vec.begin() + vec.size() / 2;
     cout << "mid: " << *mid << endl;
 
-        
+    cout << "naive BSearch: " << naive_binary_search({1,2,3,4,5,8}) << endl;
+
+    // array pointers are iterators
+    int arr[] = {0,1,2,3,4,5,6,7,8,9};
+    int *p = arr; // p points to the first element in arr 
+    ++p; // p points to arr[1]
+    cout << "p: " << *p << endl;
+
+    // vector equality
+    vector<int> vec1 {1, 2, 3, 4}; 
+    vector<int> vec2 {1, 2, 3, 4};
+
+    cout << (vec1 == vec2) << endl;
+    
+    int int_arr[] = {0, 1, 2, 3, 4, 5};
+    // ivec has six elements; each is a copy of the corresponding element in int_arr 
+    vector<int> ivec(begin(int_arr), end(int_arr));
 
 }
-
