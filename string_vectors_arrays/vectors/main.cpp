@@ -39,6 +39,16 @@ int main(){
 
     for (auto i :  vec)
         cout << "vec: " << i <<  endl;
+    
+    vector<int>::iterator it; // it can read and write vector<int> elements 
+    string::iterator it2; // it2 can read and write characters in a string
+    vector<int>::const_iterator it3; // it3 can read but not write elements 
+    string::const_iterator it4; // it4 can read but not write characters
+
+    // compute an iterator to the element closest to the midpoint of vec 
+    auto mid = vec.begin() + vec.size() / 2;
+    cout << "mid: " << *mid << endl;
+
         
 
 }
