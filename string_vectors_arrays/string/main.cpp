@@ -77,6 +77,6 @@ int main(){
         index != text.size() && !isspace(text[index]); ++index) 
             text[index] = toupper(text[index]); // capitalize the current character (NOT empty)
 
-    return 0;
+    return 0; 
     
 }
